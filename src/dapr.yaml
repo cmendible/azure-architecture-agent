@@ -1,0 +1,11 @@
+version: 1
+common:
+  resourcesPath: ./components/
+  logLevel: debug
+  appLogDestination: console
+  daprdLogDestination: console
+
+apps:
+  - appID: architecture-agent
+    appDirPath: ./agent
+    command: ["chainlit", "run", "app.py", "-w", "--port", "8000"]
